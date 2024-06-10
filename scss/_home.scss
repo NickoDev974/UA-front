@@ -1,0 +1,208 @@
+@import "fonction";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+  #presentation-home {
+    margin: 4rem auto;
+  }
+  img {
+    //border: solid color(bleu) 10px;
+    border-radius: 110px;
+    box-shadow: black 2px 2px 2rem;
+  }
+  .article1 img {
+    width: 95%;
+  }
+  .article2 {
+    li img {
+      width: 95%;
+    }
+  }
+  .article5 {
+    img {
+      width: 95%;
+    }
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+// Styles pour la section de présentation
+#presentation-home {
+  max-width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  color: color(bleu); // Exemple de couleur
+}
+
+// Styles pour les articles
+.home article {
+  margin: 1rem;
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  border: color(bleu) 4px solid;
+  border-radius: 10px;
+  //background-color: rgb(162, 49, 49);
+}
+
+.home h3 {
+  color: color(bleu);
+
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.home h4 {
+  color: color(bleu);
+  font-size: 1.5rem;
+}
+
+.home p {
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+
+.home ul {
+  padding: 0;
+  align-items: center;
+  list-style: none;
+}
+
+.home li {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+//style pour les bouttons
+button {
+  color: color(blanc);
+}
+
+// Styles pour les images
+.Shops img {
+  box-shadow: black 10px 10px 10px;
+  width: 200px;
+  height: auto;
+}
+
+@media screen and (min-width: 425px) {
+  #presentation-home {
+    max-width: 100%;
+    text-align: center;
+    margin: 4rem;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .article2 {
+      .conteneurA2 {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .aquario {
+          text-align: center;
+          margin: 0;
+
+          display: flex;
+          flex-direction: row;
+          //align-items: center;
+          //justify-content: center;
+          width: 100%;
+          h2 {
+            margin: 0;
+          }
+          img {
+            margin: 0 auto;
+          }
+          ul {
+            flex-direction: row;
+          }
+
+          li {
+            display: flex;
+            flex-direction: column;
+            //margin: 5rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .home article {
+    margin: 1rem;
+
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .Shops li {
+    display: flex;
+    flex-direction: column;
+  }
+  .Shops img {
+    margin: auto;
+    margin-bottom: 3rem;
+    width: 95%;
+  }
+  .Shops h2 {
+    font-size: 3rem;
+    color: color(bleu);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 1200px;
+  }
+  .home {
+    display: flex;
+
+    flex-wrap: wrap;
+  }
+  .home article {
+    margin: 1rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0;
+  }
+
+  /* Style des articles */
+
+  .article1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+  }
+  .article2 {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 4;
+  }
+  .article3 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+  }
+  .article4 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+  .article5 {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+  }
+  .Shops {
+    grid-column: 1 / span 2;
+    grid-row: 9 / span 6;
+  }
+}

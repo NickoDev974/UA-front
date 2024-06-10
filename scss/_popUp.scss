@@ -1,0 +1,33 @@
+.popUp {
+  position: fixed; /* Positionnement absolu par rapport à la fenêtre du navigateur */
+  top: 50%; /* Le popup sera centré verticalement */
+  left: 50%; /* Le popup sera centré horizontalement */
+  transform: translate(-50%, -50%);
+  background-color: mediumturquoise;
+  border: solid 3px mediumturquoise;
+  border-radius: 10px;
+  box-shadow: black 10px 10px 5px;
+  //position: relative;
+  .closePopUp {
+    text-align: end;
+    margin: 1rem;
+  }
+  .sectionPopUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .textePopUp {
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: large;
+    }
+    .msg {
+      text-align: center;
+      font-style: italic;
+    }
+    button {
+      justify-content: center;
+    }
+  }
+}
